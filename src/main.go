@@ -58,7 +58,9 @@ func main() {
 				result[i] = 'Z'
 			case 'ž', 'ź', 'ż':
 				result[i] = 'z'
-			case '€', '¢':
+			case '¢':
+				result[i] = 'c' // or '€' : will add a flag '--keep-currency-symbols'
+			case '€':
 				result[i] = 'C' // or '€' : will add a flag '--keep-currency-symbols'
 			case '†', '‡', 'ˆ', '‹', '›', '•', '™':
 				// skip these symbols
