@@ -78,6 +78,8 @@ func main() {
 				result[i] = 'U'
 			case 'û', 'ü', 'ù', 'ú', 'ū', 'µ', 'ũ', 'ŭ', 'ů', 'ű', 'ų':
 				result[i] = 'u'
+			case 'Ŵ':
+				result[i] = 'W'
 			case 'Ÿ':
 				result[i] = 'Y'
 			case 'ÿ':
