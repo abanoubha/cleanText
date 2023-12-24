@@ -70,7 +70,7 @@ func main() {
 				result[i] = 'Y' // will add a flag '--keep-currency-symbols'
 			case '†', '‡', 'ˆ', '‹', '«', '›', '•', '™', '¦', '¨', '©', '®', '¯', '¬':
 				// skip these symbols
-			default: // ° -> degree sign (will keep it)
+			default:
 				if c <= math.MaxUint8 {
 					result[i] = byte(c)
 				} else {

@@ -13,6 +13,15 @@ abanoub
 
 - <https://www.charset.org/utf-8>
 
+## What ?
+
+symbols that are kept after cleaning
+
+| symbol | meaning         |
+|:------:|:----------------|
+| ±      | Plus-minus Sign |
+| °      | degree sign     |
+
 ## Further development
 
 Let me know if you have any suggestion and/or problems by writing an [issue](https://github.com/abanoubha/cleanText/issues). If you have an addition or feature or a fix, make a [pull request](https://github.com/abanoubha/cleanText/pulls).
