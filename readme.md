@@ -5,7 +5,8 @@ A simple program to clean up text. The goal of the program is to accept text fro
 Basic usage:
 
 ```sh
-echo "àbanôūb" | cleanText
+$ echo "àbanôūb" | cleanText
+abanoub
 ```
 
 ## Further development
