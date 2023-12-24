@@ -14,7 +14,7 @@ func main() {
 		result := make([]byte, len(inp))
 		for i, c := range inp {
 			switch c {
-			case 'À', 'Á', 'Â', 'Ä', 'Ã', 'Å', 'Ā':
+			case 'À', 'Á', 'Â', 'Ä', 'Ã', 'Å', 'Ā', 'Ą':
 				result[i] = 'A'
 			case 'Æ':
 				result[i] = 'A' // make it "Ae" later
