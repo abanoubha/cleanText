@@ -118,7 +118,7 @@ func main() {
 				result[i] = 'x'
 			case '¹':
 				result[i] = '1'
-			case '²':
+			case '²', 'Ƨ', 'ƨ':
 				result[i] = '2'
 			case '³':
 				result[i] = '3'
