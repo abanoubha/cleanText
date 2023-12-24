@@ -26,6 +26,8 @@ func main() {
 				result[i] = 'C'
 			case 'ç', 'ć', 'č':
 				result[i] = 'c'
+			case 'Ð':
+				result[i] = 'D'
 			case 'È', 'É', 'Ê', 'Ë', 'Ē', 'Ė', 'Ę':
 				result[i] = 'E'
 			case 'è', 'é', 'ê', 'ë', 'ē', 'ė', 'ę':
