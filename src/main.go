@@ -50,7 +50,7 @@ func main() {
 				result[i] = 'I'
 			case 'î', 'ï', 'í', 'ī', 'į', 'ì', '¡', 'ı':
 				result[i] = 'i'
-			case 'Ł':
+			case 'Ł', 'Ĺ':
 				result[i] = 'L'
 			case 'ł':
 				result[i] = 'l'
