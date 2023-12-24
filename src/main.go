@@ -24,6 +24,8 @@ func main() {
 				result[i] = 'a' // make it "ae" later
 			case 'ß', 'Ɓ':
 				result[i] = 'B'
+			case 'Ƃ':
+				result[i] = 'b'
 			case 'Ç', 'Ć', 'Č':
 				result[i] = 'C'
 			case 'ç', 'ć', 'č':
