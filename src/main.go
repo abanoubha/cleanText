@@ -122,7 +122,7 @@ func main() {
 				result[i] = '1'
 			case '²', 'Ƨ', 'ƨ':
 				result[i] = '2'
-			case '³':
+			case '³', 'Ʒ':
 				result[i] = '3'
 			case '·':
 				result[i] = '.'
