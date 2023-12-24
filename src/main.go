@@ -18,7 +18,7 @@ func main() {
 				result[i] = 'A'
 			case 'Æ':
 				result[i] = 'A' // make it "Ae" later
-			case 'à', 'á', 'â', 'ä', 'ã', 'å', 'ā', 'ª', 'ą':
+			case 'à', 'á', 'â', 'ä', 'ã', 'å', 'ā', 'ª', 'ą', 'Ə':
 				result[i] = 'a'
 			case 'æ':
 				result[i] = 'a' // make it "ae" later
