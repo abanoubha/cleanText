@@ -62,6 +62,8 @@ func main() {
 				result[i] = 'c' // or '€' : will add a flag '--keep-currency-symbols'
 			case '€':
 				result[i] = 'C' // or '€' : will add a flag '--keep-currency-symbols'
+			case '£':
+				result[i] = 'L' // will add a flag '--keep-currency-symbols'
 			case '†', '‡', 'ˆ', '‹', '›', '•', '™':
 				// skip these symbols
 			default:
