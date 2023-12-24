@@ -13,7 +13,7 @@ abanoub
 
 - <https://www.charset.org/utf-8>
 
-## What ?
+## Kept symbols
 
 symbols that are kept after cleaning
 
