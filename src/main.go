@@ -80,6 +80,8 @@ func main() {
 				result[i] = 'u'
 			case 'Ŵ':
 				result[i] = 'W'
+			case 'ŵ':
+				result[i] = 'w'
 			case 'Ÿ':
 				result[i] = 'Y'
 			case 'ÿ':
