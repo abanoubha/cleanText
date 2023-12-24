@@ -44,7 +44,7 @@ func main() {
 				result[i] = 'g'
 			case 'Ĥ', 'Ħ':
 				result[i] = 'H'
-			case 'ĥ':
+			case 'ĥ', 'ħ':
 				result[i] = 'h'
 			case 'Î', 'Ï', 'Í', 'Ī', 'Į', 'Ì':
 				result[i] = 'I'
