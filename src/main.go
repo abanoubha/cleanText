@@ -26,7 +26,7 @@ func main() {
 				result[i] = 'B'
 			case 'Ƃ', 'ƃ', 'Ƅ', 'ƅ':
 				result[i] = 'b'
-			case 'Ç', 'Ć', 'Č':
+			case 'Ç', 'Ć', 'Č', 'Ƈ':
 				result[i] = 'C'
 			case 'ç', 'ć', 'č', 'Ɔ':
 				result[i] = 'c'
