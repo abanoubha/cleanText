@@ -62,6 +62,8 @@ func main() {
 				result[i] = 'o'
 			case 'Þ', 'þ':
 				result[i] = 'p'
+			case 'ŕ':
+				result[i] = 'r'
 			case 'Ś', 'Š', '§':
 				result[i] = 'S'
 			case 'ś', 'š':
