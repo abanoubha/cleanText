@@ -32,7 +32,7 @@ func main() {
 				result[i] = 'f'
 			case 'Î', 'Ï', 'Í', 'Ī', 'Į', 'Ì':
 				result[i] = 'I'
-			case 'î', 'ï', 'í', 'ī', 'į', 'ì':
+			case 'î', 'ï', 'í', 'ī', 'į', 'ì', '¡':
 				result[i] = 'i'
 			case 'Ł':
 				result[i] = 'L'
