@@ -100,6 +100,8 @@ func main() {
 				result[i] = '3'
 			case '·':
 				result[i] = '.'
+			case 'Ĳ', 'ĳ':
+				// handle ligatures later
 			default:
 				if c <= math.MaxUint8 {
 					result[i] = byte(c)
