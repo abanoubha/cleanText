@@ -58,7 +58,7 @@ func main() {
 				result[i] = 'N'
 			case 'ñ', 'ń', 'ņ', 'ň', 'ŉ', 'ŋ':
 				result[i] = 'n'
-			case 'ô', 'ö', 'ò', 'ó', 'œ', 'ø', 'ō', 'õ', 'º', 'ő':
+			case 'ô', 'ö', 'ò', 'ó', 'ø', 'ō', 'õ', 'º', 'ő':
 				result[i] = 'o'
 			case 'Þ', 'þ':
 				result[i] = 'p'
@@ -100,7 +100,7 @@ func main() {
 				result[i] = '3'
 			case '·':
 				result[i] = '.'
-			case 'Ĳ', 'ĳ':
+			case 'Ĳ', 'ĳ', 'Œ':
 				// handle ligatures later
 			default:
 				if c <= math.MaxUint8 {
