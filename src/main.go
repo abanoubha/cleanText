@@ -52,7 +52,7 @@ func main() {
 				result[i] = 'n'
 			case 'ô', 'ö', 'ò', 'ó', 'œ', 'ø', 'ō', 'õ', 'º':
 				result[i] = 'o'
-			case 'Þ':
+			case 'Þ', 'þ':
 				result[i] = 'p'
 			case 'Ś', 'Š', '§':
 				result[i] = 'S'
@@ -80,7 +80,7 @@ func main() {
 				result[i] = 'Y' // will add a flag '--keep-currency-symbols'
 			case '†', '‡', 'ˆ', '‹', '«', '›', '»', '•', '™', '¦', '¨', '©', '®', '¯', '¬', '´', '¶', '¸', '¿':
 				// skip these symbols
-			case '¼', '½', '¾':
+			case '¼', '½', '¾', '÷':
 				// skipped math
 			case '×': // multiplication sign
 				result[i] = 'x'
