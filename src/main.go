@@ -72,6 +72,8 @@ func main() {
 				// skip these symbols
 			case '²':
 				result[i] = '2'
+			case '³':
+				result[i] = '3'
 			default:
 				if c <= math.MaxUint8 {
 					result[i] = byte(c)
