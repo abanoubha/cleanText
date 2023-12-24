@@ -56,7 +56,7 @@ func main() {
 				result[i] = 'l'
 			case 'Ñ', 'Ń', 'Ņ':
 				result[i] = 'N'
-			case 'ñ', 'ń':
+			case 'ñ', 'ń', 'ņ':
 				result[i] = 'n'
 			case 'ô', 'ö', 'ò', 'ó', 'œ', 'ø', 'ō', 'õ', 'º':
 				result[i] = 'o'
