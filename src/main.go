@@ -38,9 +38,9 @@ func main() {
 				result[i] = 'e'
 			case 'ƒ':
 				result[i] = 'f'
-			case 'Ĝ', 'Ğ':
+			case 'Ĝ', 'Ğ', 'Ġ', 'Ģ':
 				result[i] = 'G'
-			case 'ĝ', 'ğ':
+			case 'ĝ', 'ğ', 'ġ':
 				result[i] = 'g'
 			case 'Î', 'Ï', 'Í', 'Ī', 'Į', 'Ì':
 				result[i] = 'I'
