@@ -70,6 +70,8 @@ func main() {
 				result[i] = 'Y' // will add a flag '--keep-currency-symbols'
 			case '†', '‡', 'ˆ', '‹', '«', '›', '•', '™', '¦', '¨', '©', '®', '¯', '¬', '´', '¶', '¸':
 				// skip these symbols
+			case '¹':
+				result[i] = '1'
 			case '²':
 				result[i] = '2'
 			case '³':
