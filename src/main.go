@@ -124,7 +124,7 @@ func main() {
 				result[i] = '3'
 			case '·':
 				result[i] = '.'
-			case 'Ĳ', 'ĳ', 'Œ', 'œ', 'ƕ':
+			case 'Ĳ', 'ĳ', 'Œ', 'œ', 'ƕ', 'Ƣ', 'ƣ':
 				// handle ligatures later
 			default:
 				if c <= math.MaxUint8 {
