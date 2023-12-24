@@ -68,7 +68,7 @@ func main() {
 				result[i] = 'o' // will add a flag '--keep-currency-symbols'
 			case '¥':
 				result[i] = 'Y' // will add a flag '--keep-currency-symbols'
-			case '†', '‡', 'ˆ', '‹', '›', '•', '™', '¦', '¨', '©':
+			case '†', '‡', 'ˆ', '‹', '«', '›', '•', '™', '¦', '¨', '©', '®', '¯', '¬':
 				// skip these symbols
 			default:
 				if c <= math.MaxUint8 {
