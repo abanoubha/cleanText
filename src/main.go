@@ -120,7 +120,7 @@ func main() {
 				result[i] = 'x'
 			case '¹':
 				result[i] = '1'
-			case '²', 'Ƨ', 'ƨ':
+			case '²', 'Ƨ', 'ƨ', 'ƻ':
 				result[i] = '2'
 			case '³', 'Ʒ', 'ƺ':
 				result[i] = '3'
