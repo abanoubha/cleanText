@@ -48,7 +48,7 @@ func main() {
 				result[i] = 'S'
 			case 'ś', 'š':
 				result[i] = 's'
-			case 'û', 'ü', 'ù', 'ú', 'ū':
+			case 'û', 'ü', 'ù', 'ú', 'ū', 'µ':
 				result[i] = 'u'
 			case 'Ÿ':
 				result[i] = 'Y'
