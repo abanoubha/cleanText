@@ -13,6 +13,10 @@ abanoub
 
 - <https://www.charset.org/utf-8>
 
+## Converted symbols
+
+See source code for now. I will document them later.
+
 ## Kept symbols
 
 symbols that are kept after cleaning
