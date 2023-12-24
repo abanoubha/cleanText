@@ -72,7 +72,7 @@ func main() {
 				result[i] = 's'
 			case 'Ţ', 'Ť':
 				result[i] = 'T'
-			case 'ţ':
+			case 'ţ', 'ť':
 				result[i] = 't'
 			case 'û', 'ü', 'ù', 'ú', 'ū', 'µ':
 				result[i] = 'u'
