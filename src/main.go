@@ -70,6 +70,8 @@ func main() {
 				result[i] = 'S'
 			case 'ś', 'š', 'ŝ', 'ş':
 				result[i] = 's'
+			case 'Ţ':
+				result[i] = 'T'
 			case 'û', 'ü', 'ù', 'ú', 'ū', 'µ':
 				result[i] = 'u'
 			case 'Ÿ':
