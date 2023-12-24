@@ -60,6 +60,8 @@ func main() {
 				result[i] = 'z'
 			case '€':
 				result[i] = 'C' // or '€' : will add a flag '--keep-currency-symbols'
+			case '†', '‡', 'ˆ':
+				// skip these symbols
 			default:
 				if c <= math.MaxUint8 {
 					result[i] = byte(c)
