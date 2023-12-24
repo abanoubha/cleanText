@@ -58,6 +58,8 @@ func main() {
 				result[i] = 'Z'
 			case 'ž', 'ź', 'ż':
 				result[i] = 'z'
+			case '€':
+				result[i] = 'C' // or '€' : will add a flag '--keep-currency-symbols'
 			default:
 				if c <= math.MaxUint8 {
 					result[i] = byte(c)
