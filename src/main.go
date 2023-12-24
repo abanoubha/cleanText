@@ -42,7 +42,7 @@ func main() {
 				result[i] = 'N'
 			case 'ñ', 'ń':
 				result[i] = 'n'
-			case 'ô', 'ö', 'ò', 'ó', 'œ', 'ø', 'ō', 'õ':
+			case 'ô', 'ö', 'ò', 'ó', 'œ', 'ø', 'ō', 'õ', 'º':
 				result[i] = 'o'
 			case 'Ś', 'Š', '§':
 				result[i] = 'S'
