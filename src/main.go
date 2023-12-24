@@ -64,7 +64,7 @@ func main() {
 				result[i] = 'p'
 			case 'Ŕ', 'Ŗ':
 				result[i] = 'R'
-			case 'ŕ':
+			case 'ŕ', 'ŗ':
 				result[i] = 'r'
 			case 'Ś', 'Š', '§':
 				result[i] = 'S'
