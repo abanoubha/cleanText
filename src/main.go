@@ -52,7 +52,7 @@ func main() {
 				result[i] = 'i'
 			case 'Ł', 'Ĺ', 'Ļ', 'Ľ':
 				result[i] = 'L'
-			case 'ł':
+			case 'ł', 'ľ':
 				result[i] = 'l'
 			case 'Ñ', 'Ń':
 				result[i] = 'N'
