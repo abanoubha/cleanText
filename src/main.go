@@ -48,6 +48,8 @@ func main() {
 				result[i] = 'n'
 			case 'ô', 'ö', 'ò', 'ó', 'œ', 'ø', 'ō', 'õ', 'º':
 				result[i] = 'o'
+			case 'Þ':
+				result[i] = 'p'
 			case 'Ś', 'Š', '§':
 				result[i] = 'S'
 			case 'ś', 'š':
