@@ -76,6 +76,8 @@ func main() {
 				// skip these symbols
 			case '¼', '½', '¾':
 				// skipped math
+			case '×': // multiplication sign
+				result[i] = 'x'
 			case '¹':
 				result[i] = '1'
 			case '²':
