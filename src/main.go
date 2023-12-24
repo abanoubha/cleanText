@@ -60,7 +60,7 @@ func main() {
 				result[i] = 'z'
 			case '€':
 				result[i] = 'C' // or '€' : will add a flag '--keep-currency-symbols'
-			case '†', '‡', 'ˆ':
+			case '†', '‡', 'ˆ', '‹', '›', '•', '™':
 				// skip these symbols
 			default:
 				if c <= math.MaxUint8 {
