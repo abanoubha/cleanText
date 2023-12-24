@@ -30,7 +30,7 @@ func main() {
 				result[i] = 'C'
 			case 'ç', 'ć', 'č', 'Ɔ', 'ƈ':
 				result[i] = 'c'
-			case 'Ð', 'Ď':
+			case 'Ð', 'Ď', 'Ɖ':
 				result[i] = 'D'
 			case 'ð', 'ď', 'đ':
 				result[i] = 'd'
