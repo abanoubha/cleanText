@@ -22,7 +22,7 @@ func main() {
 				result[i] = 'a'
 			case 'æ':
 				result[i] = 'a' // make it "ae" later
-			case 'ß':
+			case 'ß', 'Ɓ':
 				result[i] = 'B'
 			case 'Ç', 'Ć', 'Č':
 				result[i] = 'C'
