@@ -94,7 +94,7 @@ func main() {
 				result[i] = 'W'
 			case 'ŵ':
 				result[i] = 'w'
-			case 'Ÿ', 'Ŷ':
+			case 'Ÿ', 'Ŷ', 'Ƴ':
 				result[i] = 'Y'
 			case 'ÿ', 'ŷ':
 				result[i] = 'y'
