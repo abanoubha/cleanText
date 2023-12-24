@@ -54,6 +54,8 @@ func main() {
 				result[i] = 'i'
 			case 'Ƙ':
 				result[i] = 'K'
+			case 'ƙ':
+				result[i] = 'k'
 			case 'Ł', 'Ĺ', 'Ļ', 'Ľ', 'Ŀ':
 				result[i] = 'L'
 			case 'ł', 'ľ', 'ŀ':
