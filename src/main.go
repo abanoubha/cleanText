@@ -124,6 +124,8 @@ func main() {
 				result[i] = '2'
 			case '³', 'Ʒ', 'ƺ':
 				result[i] = '3'
+			case 'Ƽ', 'ƽ', 'ƾ':
+				result[i] = '5'
 			case '·':
 				result[i] = '.'
 			case 'Ĳ', 'ĳ', 'Œ', 'œ', 'ƕ', 'Ƣ', 'ƣ':
