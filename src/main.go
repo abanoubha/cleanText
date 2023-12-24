@@ -100,7 +100,7 @@ func main() {
 				result[i] = 'o' // will add a flag '--keep-currency-symbols'
 			case '¥':
 				result[i] = 'Y' // will add a flag '--keep-currency-symbols'
-			case '†', '‡', 'ˆ', '‹', '«', '›', '»', '•', '™', '¦', '¨', '©', '®', '¯', '¬', '´', '¶', '¸', '¿':
+			case '†', '‡', 'ˆ', '‹', '«', '›', '»', '•', '™', '¦', '¨', '©', '®', '¯', '¬', '´', '¶', '¸', '¿', 'ſ':
 				// skip these symbols
 			case '¼', '½', '¾', '÷':
 				// skipped math
