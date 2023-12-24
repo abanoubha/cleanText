@@ -74,6 +74,8 @@ func main() {
 				result[i] = '2'
 			case '³':
 				result[i] = '3'
+			case '·':
+				result[i] = '.'
 			default:
 				if c <= math.MaxUint8 {
 					result[i] = byte(c)
