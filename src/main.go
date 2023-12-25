@@ -130,7 +130,7 @@ func main() {
 				result[i] = '5'
 			case '·':
 				result[i] = '.'
-			case 'Ĳ', 'ĳ', 'Œ', 'œ', 'ƕ', 'Ƣ', 'ƣ', 'Ǆ', 'ǅ', 'ǆ', 'Ǉ', 'ǈ', 'ǉ':
+			case 'Ĳ', 'ĳ', 'Œ', 'œ', 'ƕ', 'Ƣ', 'ƣ', 'Ǆ', 'ǅ', 'ǆ', 'Ǉ', 'ǈ', 'ǉ', 'Ǌ', 'ǋ', 'ǌ':
 				// handle ligatures later
 			default:
 				if c <= math.MaxUint8 {
