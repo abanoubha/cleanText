@@ -124,7 +124,7 @@ func main() {
 				result[i] = '1'
 			case '²', 'Ƨ', 'ƨ', 'ƻ':
 				result[i] = '2'
-			case '³', 'Ʒ', 'ƺ':
+			case '³', 'Ʒ', 'ƺ', 'Ǯ', 'ǯ':
 				result[i] = '3'
 			case 'Ƽ', 'ƽ', 'ƾ':
 				result[i] = '5'
