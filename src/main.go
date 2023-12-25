@@ -52,6 +52,8 @@ func main() {
 				result[i] = 'I'
 			case 'î', 'ï', 'í', 'ī', 'į', 'ì', '¡', 'ı', 'ĺ', 'ļ', 'Ɩ', 'ǐ':
 				result[i] = 'i'
+			case 'ǰ':
+				result[i] = 'j'
 			case 'Ƙ', 'Ǩ':
 				result[i] = 'K'
 			case 'ƙ', 'ǩ':
