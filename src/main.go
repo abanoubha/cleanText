@@ -8,6 +8,12 @@ import (
 )
 
 func main() {
+	if len(os.Args) < 2 {
+		// choose a default behavior
+		printHelpScreen()
+		return
+	}
+
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		inp := scanner.Text()
