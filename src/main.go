@@ -14,34 +14,39 @@ import (
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		// choose a default behavior
+	if contains(os.Args, "--help") || contains(os.Args, "-h") {
 		printHelpScreen()
-		return
+		os.Exit(0)
 	}
 
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
-		inp := scanner.Text()
+		data := scanner.Text()
 
-		switch os.Args[1] {
-		case "--special-chars", "--special":
-			output := normalizeSpecialChars(inp)
-			fmt.Println(output)
-		case "--similar":
-			fmt.Println(convertSimilarChars(inp))
-			// alt func
-			fmt.Println(convertSimilarCharsAlt(inp))
-		case "--liga", "--ligatures":
-			fmt.Println(normalizeLigatures(inp))
-			// alt func
-			fmt.Println(normalizeLigaturesAlt(inp))
-		case "-h", "--help":
-			printHelpScreen()
-		default:
-			printHelpScreen()
+		if len(os.Args) < 2 {
+			// default befavior
+			data = normalizeSpecialChars(data)
+			data = normalizeLigatures(data)
+			data = convertSimilarChars(data)
 		}
 
+		if contains(os.Args, "--special-chars") || contains(os.Args, "--special") {
+			data = normalizeSpecialChars(data)
+		}
+
+		if contains(os.Args, "--similar") {
+			data = convertSimilarChars(data)
+			// alt func
+			data = convertSimilarCharsAlt(data)
+		}
+
+		if contains(os.Args, "--liga") || contains(os.Args, "--ligatures") {
+			data = normalizeLigatures(data)
+			// alt func
+			data = normalizeLigaturesAlt(data)
+		}
+
+		fmt.Println(data)
 	}
 } // main
 
@@ -393,4 +398,13 @@ func normalizeLigaturesAlt(input string) string {
 		}
 	}
 	return strings.Join(output, "")
+}
+
+func contains(s []string, str string) bool {
+	for _, v := range s {
+		if v == str {
+			return true
+		}
+	}
+	return false
 }
