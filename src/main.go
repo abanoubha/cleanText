@@ -28,6 +28,8 @@ func main() {
 			data = normalizeSpecialChars(data)
 			data = normalizeLigatures(data)
 			data = convertSimilarChars(data)
+			// data = convertSimilarNumbers(data)
+			// data = normalizeCurrencySymbols(data)
 		}
 
 		if contains(os.Args, "--special-chars") || contains(os.Args, "--special") {
@@ -44,6 +46,14 @@ func main() {
 			data = normalizeLigatures(data)
 			// alt func
 			data = normalizeLigaturesAlt(data)
+		}
+
+		if contains(os.Args, "--numbers") {
+			data = convertSimilarNumbers(data)
+		}
+
+		if contains(os.Args, "--currency") {
+			data = normalizeCurrencySymbols(data)
 		}
 
 		fmt.Println(data)
@@ -206,22 +216,6 @@ func convertSimilarChars(input string) string {
 		'Ž': "Z", 'Ź': "Z", 'Ż': "Z", 'Ƶ': "Z", 'Ȥ': "Z", 'ɀ': "Z", 'ʐ': "Z", 'ʑ': "Z",
 
 		'ž': "z", 'ź': "z", 'ż': "z", 'ƶ': "z", 'ȥ': "z",
-
-		// case '¢':
-		// 	result[i] = 'c' // or '€' : will add a flag '--keep-currency-symbols'
-		// case '€':
-		// 	result[i] = 'C' // or '€' : will add a flag '--keep-currency-symbols'
-		// case '£':
-		// 	result[i] = 'L' // will add a flag '--keep-currency-symbols'
-		// case '¤':
-		// 	result[i] = 'o' // will add a flag '--keep-currency-symbols'
-		// case '¥':
-		// 	result[i] = 'Y' // will add a flag '--keep-currency-symbols'
-		'Ƨ': "2", 'ƨ': "2", 'ƻ': "2",
-
-		'Ʒ': "3", 'ƺ': "3", 'Ǯ': "3", 'ǯ': "3", 'Ȝ': "3", 'ȝ': "3", 'ɜ': "3", 'ɝ': "3", 'ʒ': "3", 'ʓ': "3",
-
-		'Ƽ': "5", 'ƽ': "5", 'ƾ': "5",
 
 		'·': ".",
 
@@ -549,6 +543,71 @@ func normalizeLigaturesAlt(input string) string {
 		}
 	}
 	return strings.Join(output, "")
+}
+
+func convertSimilarNumbers(input string) string {
+	replacements := map[rune]string{
+		'Ƨ': "2",
+		'ƨ': "2",
+		'ƻ': "2",
+
+		'Ʒ': "3",
+		'ƺ': "3",
+		'Ǯ': "3",
+		'ǯ': "3",
+		'Ȝ': "3",
+		'ȝ': "3",
+		'ɜ': "3",
+		'ɝ': "3",
+		'ʒ': "3",
+		'ʓ': "3",
+
+		'Ƽ': "5",
+		'ƽ': "5",
+		'ƾ': "5",
+
+		'·': ".",
+
+		'˟': "×",
+
+		'˸': ":",
+	}
+
+	// var output []rune
+	output := make([]rune, len(input)) // use less space
+
+	for _, r := range input {
+		if replacement, ok := replacements[r]; ok {
+			output = append(output, []rune(replacement)...)
+		} else {
+			output = append(output, r)
+		}
+	}
+
+	return string(output)
+}
+
+func normalizeCurrencySymbols(input string) string {
+	replacements := map[rune]rune{
+		'¢': 'c',
+		'€': 'C',
+		'£': 'L',
+		'¤': 'o',
+		'¥': 'Y',
+	}
+
+	// var output []rune
+	output := make([]rune, len(input)) // use less space
+
+	for i, r := range input {
+		if replacement, ok := replacements[r]; ok {
+			output[i] = replacement
+		} else {
+			output[i] = r
+		}
+	}
+
+	return string(output)
 }
 
 func contains(s []string, str string) bool {
