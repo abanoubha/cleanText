@@ -349,16 +349,7 @@ func convertSimilarCharsAlt(input string) string {
 			result[i] = 'Z'
 		case 'ž', 'ź', 'ż', 'ƶ', 'ȥ':
 			result[i] = 'z'
-		case '¢':
-			result[i] = 'c' // or '€' : will add a flag '--keep-currency-symbols'
-		case '€':
-			result[i] = 'C' // or '€' : will add a flag '--keep-currency-symbols'
-		case '£':
-			result[i] = 'L' // will add a flag '--keep-currency-symbols'
-		case '¤':
-			result[i] = 'o' // will add a flag '--keep-currency-symbols'
-		case '¥':
-			result[i] = 'Y' // will add a flag '--keep-currency-symbols'
+
 		case 'Ƨ', 'ƨ', 'ƻ':
 			result[i] = '2'
 		case 'Ʒ', 'ƺ', 'Ǯ', 'ǯ', 'Ȝ', 'ȝ', 'ɜ', 'ɝ', 'ʒ', 'ʓ':
