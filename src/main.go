@@ -11,6 +11,16 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		inp := scanner.Text()
+
+		switch os.Args[1] {
+		case "--english", "-e":
+			normalizeEnglish()
+		case "-h", "--help":
+			printHelpScreen()
+		default:
+			printHelpScreen()
+		}
+
 		result := make([]byte, len(inp))
 		for i, c := range inp {
 			switch c {
@@ -193,3 +203,24 @@ func main() {
 		fmt.Println(string(result))
 	}
 } // main
+
+func printHelpScreen() {
+	fmt.Println("cleanText is a small program to normalize and clean text")
+	fmt.Println("cleanText <args>")
+	fmt.Println("commands:")
+	fmt.Println("cleanText -h (--help) : print the help screen (this screen)")
+	fmt.Println("cleanText -e (--english) : normalize English letters (e.g convert ã into a) ")
+}
+
+func normalizeEnglish(input string) string {
+	result := make([]byte, len(input))
+	for i, c := range input {
+		switch c {
+		case 'À', 'Á', 'Â', 'Ä', 'Ã', 'Å', 'Ā', 'Ą', 'ƛ', 'Ǎ', 'Ǟ', 'Ǡ', 'Ǻ', 'Ȁ', 'Ȃ', 'Ȧ', 'Ⱥ', 'Ʌ':
+			result[i] = 'A'
+		default:
+			// handle 'else' case
+		}
+	}
+	return string(result)
+}
