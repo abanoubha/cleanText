@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"strings"
 	"unicode"
 
 	"golang.org/x/text/runes"
@@ -33,6 +34,8 @@ func main() {
 			fmt.Println(convertSimilarCharsAlt(inp))
 		case "--liga", "--ligatures":
 			fmt.Println(normalizeLigatures(inp))
+			// alt func
+			fmt.Println(normalizeLigaturesAlt(inp))
 		case "-h", "--help":
 			printHelpScreen()
 		default:
@@ -295,4 +298,99 @@ func normalizeLigatures(input string) string {
 	}
 
 	return string(output)
+}
+
+func normalizeLigaturesAlt(input string) string {
+	output := make([]string, len(input))
+	for i, c := range input {
+		switch c {
+		case 'Æ':
+			output[i] = "AE"
+		case 'æ':
+			output[i] = "ae"
+		case 'Ĳ':
+			output[i] = "IJ"
+		case 'ĳ':
+			output[i] = "ij"
+		case 'Œ':
+			output[i] = "OE"
+		case 'œ':
+			output[i] = "oe"
+		case 'ƕ':
+			output[i] = "hv"
+		case 'Ƣ':
+			output[i] = "OI"
+		case 'ƣ':
+			output[i] = "oi"
+		case 'Ǆ':
+			output[i] = "DZ"
+		case 'ǅ':
+			output[i] = "Dz"
+		case 'ǆ':
+			output[i] = "dz"
+		case 'Ǉ':
+			output[i] = "LJ"
+		case 'ǈ':
+			output[i] = "Lj"
+		case 'ǉ':
+			output[i] = "lj"
+		case 'Ǌ':
+			output[i] = "NJ"
+		case 'ǋ':
+			output[i] = "Nj"
+		case 'ǌ':
+			output[i] = "nj"
+		case 'Ǣ':
+			output[i] = "AE"
+		case 'ǣ':
+			output[i] = "ae"
+		case 'Ǳ':
+			output[i] = "DZ"
+		case 'ǲ':
+			output[i] = "Dz"
+		case 'ǳ':
+			output[i] = "dz"
+		case 'Ǽ':
+			output[i] = "AE"
+		case 'ǽ':
+			output[i] = "ae"
+		case 'Ȣ':
+			output[i] = "OU"
+		case 'ȣ':
+			output[i] = "ou"
+		case 'ȸ':
+			output[i] = "db"
+		case 'ȹ':
+			output[i] = "qp"
+		case 'ɮ':
+			output[i] = "lj"
+		case 'ɶ':
+			output[i] = "oe"
+		case 'ɷ':
+			output[i] = "w"
+		case 'ʣ':
+			output[i] = "dz"
+		case 'ʤ':
+			output[i] = "dj"
+		case 'ʥ':
+			output[i] = "dz"
+		case 'ʦ':
+			output[i] = "ts"
+		case 'ʧ':
+			output[i] = "tf"
+		case 'ʨ':
+			output[i] = "tc"
+		case 'ʩ':
+			output[i] = "feng"
+		case 'ʪ':
+			output[i] = "ls"
+		case 'ʫ':
+			output[i] = "lz"
+		case 'ʬ':
+			output[i] = "w"
+		default:
+			output[i] = string(c)
+		}
+	}
+	return strings.Join(output, "")
 }
