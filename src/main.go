@@ -349,13 +349,6 @@ func convertSimilarCharsAlt(input string) string {
 			result[i] = 'Z'
 		case 'ž', 'ź', 'ż', 'ƶ', 'ȥ':
 			result[i] = 'z'
-
-		case 'Ƨ', 'ƨ', 'ƻ':
-			result[i] = '2'
-		case 'Ʒ', 'ƺ', 'Ǯ', 'ǯ', 'Ȝ', 'ȝ', 'ɜ', 'ɝ', 'ʒ', 'ʓ':
-			result[i] = '3'
-		case 'Ƽ', 'ƽ', 'ƾ':
-			result[i] = '5'
 		case '·':
 			result[i] = '.'
 		case 'Ɂ', 'ɂ', 'ʔ', 'ʡ':
