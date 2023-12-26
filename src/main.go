@@ -5,6 +5,11 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"unicode"
+
+	"golang.org/x/text/runes"
+	"golang.org/x/text/transform"
+	"golang.org/x/text/unicode/norm"
 )
 
 func main() {
@@ -19,8 +24,8 @@ func main() {
 		inp := scanner.Text()
 
 		switch os.Args[1] {
-		case "--english", "-e":
-			output := normalizeEnglish(inp)
+		case "--special-chars", "--special":
+			output := normalizeSpecialChars(inp)
 			fmt.Println(output)
 		case "-h", "--help":
 			printHelpScreen()
@@ -219,15 +224,8 @@ func printHelpScreen() {
 	fmt.Println("cleanText -e (--english) : normalize English letters (e.g convert ã into a) ")
 }
 
-func normalizeEnglish(input string) string {
-	result := make([]byte, len(input))
-	for i, c := range input {
-		switch c {
-		case 'À', 'Á', 'Â', 'Ä', 'Ã', 'Å', 'Ā', 'Ą', 'ƛ', 'Ǎ', 'Ǟ', 'Ǡ', 'Ǻ', 'Ȁ', 'Ȃ', 'Ȧ', 'Ⱥ', 'Ʌ':
-			result[i] = 'A'
-		default:
-			// handle 'else' case
-		}
-	}
-	return string(result)
+func normalizeSpecialChars(input string) string {
+	t := transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
+	result, _, _ := transform.String(t, input)
+	return result
 }
