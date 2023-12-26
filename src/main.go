@@ -14,7 +14,8 @@ func main() {
 
 		switch os.Args[1] {
 		case "--english", "-e":
-			normalizeEnglish()
+			output := normalizeEnglish(inp)
+			fmt.Println(output)
 		case "-h", "--help":
 			printHelpScreen()
 		default:
