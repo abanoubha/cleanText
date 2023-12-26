@@ -31,6 +31,8 @@ func main() {
 			fmt.Println(convertSimilarChars(inp))
 			// alt func
 			fmt.Println(convertSimilarCharsAlt(inp))
+		case "--liga", "--ligatures":
+			fmt.Println(normalizeLigatures(inp))
 		case "-h", "--help":
 			printHelpScreen()
 		default:
@@ -233,4 +235,64 @@ func convertSimilarCharsAlt(input string) string {
 		}
 	}
 	return string(result)
+}
+
+func normalizeLigatures(input string) string {
+	replacements := map[rune]string{
+		'Æ': "AE",
+		'æ': "ae",
+		'Ĳ': "IJ",
+		'ĳ': "ij",
+		'Œ': "OE",
+		'œ': "oe",
+		'ƕ': "hv",
+		'Ƣ': "OI",
+		'ƣ': "oi",
+		'Ǆ': "DZ",
+		'ǅ': "Dz",
+		'ǆ': "dz",
+		'Ǉ': "LJ",
+		'ǈ': "Lj",
+		'ǉ': "lj",
+		'Ǌ': "NJ",
+		'ǋ': "Nj",
+		'ǌ': "nj",
+		'Ǣ': "AE",
+		'ǣ': "ae",
+		'Ǳ': "DZ",
+		'ǲ': "Dz",
+		'ǳ': "dz",
+		'Ǽ': "AE",
+		'ǽ': "ae",
+		'Ȣ': "OU",
+		'ȣ': "ou",
+		'ȸ': "db",
+		'ȹ': "qp",
+		'ɮ': "lj",
+		'ɶ': "oe",
+		'ɷ': "w",
+		'ʣ': "dz",
+		'ʤ': "dj",
+		'ʥ': "dz",
+		'ʦ': "ts",
+		'ʧ': "tf",
+		'ʨ': "tc",
+		'ʩ': "Feng",
+		'ʪ': "ls",
+		'ʫ': "lz",
+		'ʬ': "w",
+	}
+
+	// var output []rune
+	output := make([]rune, len(input)) // use less space
+
+	for _, r := range input {
+		if replacement, ok := replacements[r]; ok {
+			output = append(output, []rune(replacement)...)
+		} else {
+			output = append(output, r)
+		}
+	}
+
+	return string(output)
 }
