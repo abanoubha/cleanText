@@ -66,6 +66,7 @@ func printHelpScreen() {
 	fmt.Println("commands:")
 	fmt.Println("cleanText -h (--help) : print the help screen (this screen)")
 	fmt.Println("cleanText -e (--english) : normalize English letters (e.g convert ã into a) ")
+	fmt.Println("cleanText --liga (--ligatures) : convert ligatures into normal letters ")
 }
 
 func normalizeSpecialChars(input string) string {
