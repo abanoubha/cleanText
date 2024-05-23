@@ -9,6 +9,16 @@ $ echo "àbanôūb" | cleanText
 abanoub
 ```
 
+## Commands
+
+```sh
+# build
+go mod tidy && go build -o cleantext main.go
+
+# run the program
+./cleantext -h
+```
+
 ## Resources & references
 
 - <https://www.charset.org/utf-8>
