@@ -1,2 +1,7 @@
+# executables
+cleantext
 main
-.DS_store
+
+# macOS specific files
+.DS_Store
+
