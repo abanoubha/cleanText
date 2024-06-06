@@ -17,6 +17,9 @@ go mod tidy && go build -o cleantext .
 
 # run the program
 ./cleantext -h
+
+# detect race conditions & memory leaks
+go run -race .
 ```
 
 ## Resources & references
