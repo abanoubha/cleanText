@@ -25,6 +25,7 @@ go run -race .
 ## Resources & references
 
 - <https://www.charset.org/utf-8>
+- <http://defindit.com/ascii.html>
 
 ## Converted symbols
 
